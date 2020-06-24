@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="Css-lib/all-animation.css" />
+  
+</head>
+<style>
+*{
+margin: 0px;
+padding: 0px;
+}
+body{
+    background-attachment:fixed ;
+    background-image: url("img/pic11.jpg") ;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    /* cursor: none; */
+}
+#main{
+  
+    height: auto;
+    width: auto;
+   
+    /* cursor: none; */
+}
+
+::-webkit-scrollbar {width: 20px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 0px;}
+::-webkit-scrollbar-thumb {  background: lightgray;   border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: blue; }
+
+#logo{
+  
+margin-top:10px;
+margin-left: 60px;
+width:20%;
+height:10px;
+float: left;
+
+}
+
+#mag{
+  width:25%;
+  height:auto;
+  background-color: transparent;
+  margin-left:50px;
+  overflow:visible;
+  
+
+  }
+
+ #mag .row{
+  margin-left: 0px;
+  margin-top: 8px;
+  text-align: center;
+
+  }  
+
+footer{
+  position: -webkit-sticky;
+  float: left;
+
+}
+nav{
+  height: 200px;
+  background: transparent;
+}
+.product-screens {
+  text-align: center;
+  width: 100%;
+  height: 40%;
+}
+.product-screens img {
+  box-shadow: 0px -2px 19px 4px rgba(0, 0, 0, 0.29);
+  width:100%;
+  height: auto;
+}
+.product-screens .product-screen-1 {
+  position: absolute;
+  z-index: 30; 
+  left: calc(50% + 54px);
+   bottom: 0;
+  top: 100px;
+  width: 20%;
+  box-shadow: 0px 0px 25px lightslategray ;
+}
+.product-screens .product-screen-2 {
+  position: absolute;
+  z-index: 20;
+  left: calc(50% - 114px);
+  bottom: 0;
+  top: 130px;
+  width: 20%;
+  box-shadow: 0px 0px 25px lightslategray ;
+  
+}
+.product-screens .product-screen-3 {
+  position: absolute;
+  z-index: 10;
+    left: calc(50% - 274px); 
+     bottom: 0;
+    top: 170px;
+    width: 18%;
+    box-shadow: 0px 0px 25px lightslategray ;
+}
+#cursor{
+    background-image: url("img/illustration.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: right;
+    background-size: 70%;
+    position: absolute;
+    width: 150px;
+    height:150px ;
+    border: 2px inset lightgray;
+    box-shadow: 0px 0px 25px black;
+    box-sizing: border-box;
+    transition: 0.2s;
+    transform: translate(-50%,-50%);
+    border-radius: 70%;
+    pointer-events: none;
+    overflow: hidden;
+     top:50%;
+     left:50%;
+}
+/* #main:hover ~ #cursor{
+   
+   animation: animatec 0.1s linear infinite alternate;
+    display: block;
+}
+
+@keyframes animatec{
+    0%{
+        transform: translate(-50%,-50%)   ;
+    }
+    100%{
+        transform: translate(-50%,-50%);
+       
+    }
+} */
+.enter-down-bounce{animation-duration: 3s; }
+.flip-right{animation-duration: 1s;}
+.flip-left{animation-duration:2s;}
+.tree-flip{
+    animation: flash 5s ease-in-out infinite;
+    width:100px;
+    height: 120px;
+    left:1px;
+    top:100px;
+    position: absolute;
+    z-index: 0;
+
+}
+@keyframes flash{
+
+0%{transform: skewX(8deg) ;}
+100%{ transform: skewX(13deg)  ;}
+
+} 
+#smoke {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+  left: 50%; bottom: 30px;
+  float: left;
+
+}
+
+/* smoke balls */
+
+#smoke span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 35px solid whitesmoke;
+	border-radius: 35px;
+	left: -14px; opacity: 0;
+	transform: scale(0.2);
+}
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+    10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+    10%  { opacity: 1; transform: scale(0.2) translate(0, -25px) }
+	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+
+.fd{
+  /* width: 30%;
+  height:20px; */
+  display:none ;
+  /* position:   ; */
+
+
+}
+.slacker{
+  width:auto;
+  height:40px;
+
+}
+.grp{
+  width:50%;
+  height:20px;
+}
+.grp-2{
+  width:40%;
+  height:100px;
+}
+.cms{
+  width:50%;
+  height:70px;
+  
+}
+.yrs{
+  width:100%;
+  height:50px;
+  z-index: 0;
+}
+.fm{
+  width: auto;
+  height:30px;
+  z-index: 0;
+ }
+ #parallex{
+    background-image: url("img/call-to-action-bg.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    float: left;
+    min-height: 600px; 
+    width:100%;
+    opacity: 0.8;
+   
+}
+h3{
+  text-align: center;
+  color:#20c997;
+  text-shadow: 0px 0px 15px whitesmoke;
+  font-size: 27px;
+}
+h4{
+  text-align: center;
+  color:#20c997;
+  text-shadow: 0px 0px 15px whitesmoke;
+  font-size: 20px;
+}
+
+ul li{
+  font-size: 15px;
+  color:white;
+  display: inline;
+  margin-left:60px;
+}
+ul{
+  display: inline;
+  
+}
+i{
+
+  box-shadow: 0px 0px 10px blanchedalmond;
+  padding: 10px;
+}
+.field{
+  color:white;
+}
+</style>
+<body>
+  <div id="cursor"></div>
+  <div id="main">
+    <!-- header -->
+    <div class="ui grid">
+      <div class="row">
+        <div class="column">
+          <div id="logo">
+            <img src="img/Group-3.png" alt="kk" class="grp dance">
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- <header> -->      
+          <div class="ui grid">
+            <div class="two column row">
+              <div class="right floated column"> <img src="img/Can you catch the slacker.png" class="slacker"/></div>
+            </div>
+          </div>
+          <div class="ui grid" id="mag">
+            <div class="row">
+              <div class="column"><img src="img/Group -2.png"  class="grp-2" alt="kk"></div>
+            </div>
+            <div class="row">
+              <div class="column"><img src="img/COMINGSOON.png" class="cms pulse-slow" alt="kk"></div>
+             
+            </div>
+            <div class="row">
+              <div class="column"><img src="img/Your solution to watching overemployees productivity level.png" class="yrs" alt="kk"></div>
+            </div>
+          </div>
+          <div class="ui grid">
+            <div class="three column row">
+              <div class="right floated column">
+                <div class="fd">
+                  <img src="img/You Found Him!-2.png" class="fm enter-down-bounce" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+        <div id="parallex">
+          <div class="ui grid">
+            <div class="four wide column" >&nbsp;</div>
+          </div>
+        </div>
+        <!-- <section>
+          <div class="ui grid">
+            <div class="three column row" >
+              <div class="right floated column"><img src="img/advanced-feature-3.jpg" class="analyze flip-down" ></div>
+            </div>
+          </div>
+        </section> -->
+
+      <section>
+        <div class="ui grid">
+          <div class="row" >
+            <div class="eight wide column">
+              <h3>GET IN TOUCH</h3>
+              <h4>Response within 24 hourse</h4><br/>
+              <ul>
+                <li><i class="google icon"></i></li>
+               <li> <i class="facebook icon"></i></li>
+               <li> <i class="twitter icon"></i></li>
+              <li>  <i class="envelope icon"></i></li>
+            </ul>
+               
+              </div>
+              <div class="eight wide column">
+                <div class="ui form">
+                      <div class="field">
+                        <div class="ui right labeled left icon input flip-right">
+                          <i class="tags icon" ></i>
+                          <input type="text" placeholder=""/>
+                          <i class="ui tag label">Name</i>
+                      </div>
+                      </div>
+                    <div class="field flip-left">
+                      <label>Message</label>
+                      <textarea placeholder="Any Question?"></textarea>
+                    </div>
+                    <div class="inline field">
+                      <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden">
+                        <label>I agree to the terms and conditions</label>
+                      </div>
+                    </div>
+                    <div class="ui submit button">Submit</div>
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+      </section>
+        
+     <!-- footer -->
+     <footer>
+      <nav class="navbar navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="product-screens ">
+            <div class="product-screen-1 flip-right " >
+              <img src="img/product-screen-1.png" alt="">
+            </div>
+            <div class="product-screen-2 enter-down-bounce" >
+              <img src="img/product-screen-2.png" alt="">
+            </div>
+            <div class="product-screen-3 flip-left" >
+              <img src="img/product-screen-3.png" alt="">
+            </div>
+          </div>
+           <!-- <a href="contact-us.html"><img src="img/product-features.png" alt="" class="tree-flip" /></a> -->
+            <div id="smoke">
+              <span class="s0"></span>
+              <span class="s1"></span>
+              <span class="s2"></span>
+              <span class="s3"></span>
+              <span class="s4"></span>
+              <span class="s5"></span>
+              <span class="s6"></span>
+              <span class="s7"></span>
+              <span class="s8"></span>
+              <span class="s9"></span>
+            </div>
+        </div>
+      </nav>  
+    </footer>
+</body>
+  <script type="text/javascript">
+      $(document).ready(function(){
+      $("#main").mouseover(function(e){
+          $('.fd').fadeIn();
+         });
+      });
+	  
+	var cursor = document.getElementById('cursor');
+	document.addEventListener('mousemove',
+	function(e){
+		var x = e.clientX;
+		var y = e.clientY;
+		cursor.style.left= x + "px";  
+		cursor.style.top= y + "px";
+
+	});
+  </script>
+</html>
